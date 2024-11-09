@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://8xwvbx48np4m"]
+[gd_scene load_steps=9 format=3 uid="uid://8xwvbx48np4m"]
 
-[ext_resource type="Texture2D" uid="uid://dgkb413gd8qhc" path="res://Dirt4.png" id="1_fq0i5"]
-[ext_resource type="Texture2D" uid="uid://bmhfrhspve6ot" path="res://LGrass3.png" id="2_05cwy"]
+[ext_resource type="Texture2D" uid="uid://ynwhoy7d8e62" path="res://Sprites/Exp_Orb.png" id="1_bj7cg"]
 [ext_resource type="Script" path="res://Item.gd" id="2_qej18"]
+[ext_resource type="Texture2D" uid="uid://cnm317rv808te" path="res://Sprites/Health.png" id="3_o2l5v"]
+[ext_resource type="Texture2D" uid="uid://jsduvktvptp6" path="res://Sprites/chain_boots1.png" id="4_dbhwb"]
 [ext_resource type="Script" path="res://Inventory.gd" id="4_qqiym"]
+[ext_resource type="Texture2D" uid="uid://bd4ipxg3n0vga" path="res://Sprites/Meteor_Ability.png" id="5_x8186"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blj7f"]
 size = Vector2(32, 32)
@@ -26,155 +28,516 @@ corner_radius_bottom_left = 5
 
 [node name="Node2D" type="Node2D"]
 
-[node name="ItemBraun" type="Sprite2D" parent="."]
-position = Vector2(519, 128)
-scale = Vector2(5, 5)
-texture = ExtResource("1_fq0i5")
+[node name="Item_Orb" type="Sprite2D" parent="."]
+position = Vector2(44, 192)
+texture = ExtResource("1_bj7cg")
 script = ExtResource("2_qej18")
-ItemName = "Braun"
+ItemName = "Orb"
 ItemAmount = 1
 
-[node name="Area2D" type="Area2D" parent="ItemBraun"]
+[node name="Area2D" type="Area2D" parent="Item_Orb"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemBraun/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Orb/Area2D"]
 shape = SubResource("RectangleShape2D_blj7f")
 
-[node name="ItemBraun2" type="Sprite2D" parent="."]
-position = Vector2(519, 128)
-scale = Vector2(5, 5)
-texture = ExtResource("1_fq0i5")
+[node name="Item_Orb2" type="Sprite2D" parent="."]
+position = Vector2(101, 191)
+texture = ExtResource("1_bj7cg")
 script = ExtResource("2_qej18")
-ItemName = "Braun"
+ItemName = "Orb"
 ItemAmount = 1
 
-[node name="Area2D" type="Area2D" parent="ItemBraun2"]
+[node name="Area2D" type="Area2D" parent="Item_Orb2"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemBraun2/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Orb2/Area2D"]
 shape = SubResource("RectangleShape2D_blj7f")
 
-[node name="ItemBraun3" type="Sprite2D" parent="."]
-position = Vector2(519, 128)
-scale = Vector2(5, 5)
-texture = ExtResource("1_fq0i5")
+[node name="Item_Orb3" type="Sprite2D" parent="."]
+position = Vector2(159, 191)
+texture = ExtResource("1_bj7cg")
 script = ExtResource("2_qej18")
-ItemName = "Braun"
+ItemName = "Orb"
 ItemAmount = 1
 
-[node name="Area2D" type="Area2D" parent="ItemBraun3"]
+[node name="Area2D" type="Area2D" parent="Item_Orb3"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemBraun3/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Orb3/Area2D"]
 shape = SubResource("RectangleShape2D_blj7f")
 
-[node name="ItemBraun4" type="Sprite2D" parent="."]
-position = Vector2(519, 128)
-scale = Vector2(5, 5)
-texture = ExtResource("1_fq0i5")
+[node name="Item_Orb4" type="Sprite2D" parent="."]
+position = Vector2(228, 191)
+texture = ExtResource("1_bj7cg")
 script = ExtResource("2_qej18")
-ItemName = "Braun"
+ItemName = "Orb"
 ItemAmount = 1
 
-[node name="Area2D" type="Area2D" parent="ItemBraun4"]
+[node name="Area2D" type="Area2D" parent="Item_Orb4"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemBraun4/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Orb4/Area2D"]
 shape = SubResource("RectangleShape2D_blj7f")
 
-[node name="ItemBraun5" type="Sprite2D" parent="."]
-position = Vector2(519, 128)
-scale = Vector2(5, 5)
-texture = ExtResource("1_fq0i5")
+[node name="Item_Orb5" type="Sprite2D" parent="."]
+position = Vector2(303, 191)
+texture = ExtResource("1_bj7cg")
 script = ExtResource("2_qej18")
-ItemName = "Braun"
+ItemName = "Orb"
 ItemAmount = 1
 
-[node name="Area2D" type="Area2D" parent="ItemBraun5"]
+[node name="Area2D" type="Area2D" parent="Item_Orb5"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemBraun5/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Orb5/Area2D"]
 shape = SubResource("RectangleShape2D_blj7f")
 
-[node name="ItemGrün" type="Sprite2D" parent="."]
-position = Vector2(727, 129)
-scale = Vector2(5, 5)
-texture = ExtResource("2_05cwy")
+[node name="Item_Orb6" type="Sprite2D" parent="."]
+position = Vector2(367, 191)
+texture = ExtResource("1_bj7cg")
 script = ExtResource("2_qej18")
-ItemName = "Grün"
+ItemName = "Orb"
 ItemAmount = 1
 
-[node name="Area2D" type="Area2D" parent="ItemGrün"]
+[node name="Area2D" type="Area2D" parent="Item_Orb6"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemGrün/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Orb6/Area2D"]
 shape = SubResource("RectangleShape2D_blj7f")
 
-[node name="ItemGrün2" type="Sprite2D" parent="."]
-position = Vector2(727, 129)
-scale = Vector2(5, 5)
-texture = ExtResource("2_05cwy")
+[node name="Item_Orb7" type="Sprite2D" parent="."]
+position = Vector2(438, 191)
+texture = ExtResource("1_bj7cg")
 script = ExtResource("2_qej18")
-ItemName = "Grün"
+ItemName = "Orb"
 ItemAmount = 1
 
-[node name="Area2D" type="Area2D" parent="ItemGrün2"]
+[node name="Area2D" type="Area2D" parent="Item_Orb7"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemGrün2/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Orb7/Area2D"]
 shape = SubResource("RectangleShape2D_blj7f")
 
-[node name="ItemGrün3" type="Sprite2D" parent="."]
-position = Vector2(727, 129)
-scale = Vector2(5, 5)
-texture = ExtResource("2_05cwy")
+[node name="Item_Orb8" type="Sprite2D" parent="."]
+position = Vector2(500, 191)
+texture = ExtResource("1_bj7cg")
 script = ExtResource("2_qej18")
-ItemName = "Grün"
+ItemName = "Orb"
 ItemAmount = 1
 
-[node name="Area2D" type="Area2D" parent="ItemGrün3"]
+[node name="Area2D" type="Area2D" parent="Item_Orb8"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemGrün3/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Orb8/Area2D"]
 shape = SubResource("RectangleShape2D_blj7f")
 
-[node name="ItemGrün4" type="Sprite2D" parent="."]
-position = Vector2(727, 129)
-scale = Vector2(5, 5)
-texture = ExtResource("2_05cwy")
+[node name="Item_Orb9" type="Sprite2D" parent="."]
+position = Vector2(559, 191)
+texture = ExtResource("1_bj7cg")
 script = ExtResource("2_qej18")
-ItemName = "Grün"
+ItemName = "Orb"
 ItemAmount = 1
 
-[node name="Area2D" type="Area2D" parent="ItemGrün4"]
+[node name="Area2D" type="Area2D" parent="Item_Orb9"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemGrün4/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Orb9/Area2D"]
 shape = SubResource("RectangleShape2D_blj7f")
 
-[node name="ItemGrün5" type="Sprite2D" parent="."]
-position = Vector2(727, 129)
-scale = Vector2(5, 5)
-texture = ExtResource("2_05cwy")
+[node name="Item_Orb10" type="Sprite2D" parent="."]
+position = Vector2(622, 191)
+texture = ExtResource("1_bj7cg")
 script = ExtResource("2_qej18")
-ItemName = "Grün"
+ItemName = "Orb"
 ItemAmount = 1
 
-[node name="Area2D" type="Area2D" parent="ItemGrün5"]
+[node name="Area2D" type="Area2D" parent="Item_Orb10"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemGrün5/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Orb10/Area2D"]
 shape = SubResource("RectangleShape2D_blj7f")
 
-[node name="ItemGrün6" type="Sprite2D" parent="."]
-position = Vector2(727, 129)
-scale = Vector2(5, 5)
-texture = ExtResource("2_05cwy")
+[node name="Item_Herz" type="Sprite2D" parent="."]
+position = Vector2(43, 273)
+texture = ExtResource("3_o2l5v")
 script = ExtResource("2_qej18")
-ItemName = "Grün"
+ItemName = "Herz"
 ItemAmount = 1
 
-[node name="Area2D" type="Area2D" parent="ItemGrün6"]
+[node name="Area2D" type="Area2D" parent="Item_Herz"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemGrün6/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Herz/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Herz2" type="Sprite2D" parent="."]
+position = Vector2(101, 273)
+texture = ExtResource("3_o2l5v")
+script = ExtResource("2_qej18")
+ItemName = "Herz"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Herz2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Herz2/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Herz3" type="Sprite2D" parent="."]
+position = Vector2(162, 273)
+texture = ExtResource("3_o2l5v")
+script = ExtResource("2_qej18")
+ItemName = "Herz"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Herz3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Herz3/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Herz4" type="Sprite2D" parent="."]
+position = Vector2(227, 273)
+texture = ExtResource("3_o2l5v")
+script = ExtResource("2_qej18")
+ItemName = "Herz"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Herz4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Herz4/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Herz5" type="Sprite2D" parent="."]
+position = Vector2(295, 273)
+texture = ExtResource("3_o2l5v")
+script = ExtResource("2_qej18")
+ItemName = "Herz"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Herz5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Herz5/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Herz6" type="Sprite2D" parent="."]
+position = Vector2(366, 273)
+texture = ExtResource("3_o2l5v")
+script = ExtResource("2_qej18")
+ItemName = "Herz"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Herz6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Herz6/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Herz7" type="Sprite2D" parent="."]
+position = Vector2(433, 274)
+texture = ExtResource("3_o2l5v")
+script = ExtResource("2_qej18")
+ItemName = "Herz"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Herz7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Herz7/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Herz8" type="Sprite2D" parent="."]
+position = Vector2(500, 274)
+texture = ExtResource("3_o2l5v")
+script = ExtResource("2_qej18")
+ItemName = "Herz"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Herz8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Herz8/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Herz9" type="Sprite2D" parent="."]
+position = Vector2(564, 273)
+texture = ExtResource("3_o2l5v")
+script = ExtResource("2_qej18")
+ItemName = "Herz"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Herz9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Herz9/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Herz10" type="Sprite2D" parent="."]
+position = Vector2(631, 272)
+texture = ExtResource("3_o2l5v")
+script = ExtResource("2_qej18")
+ItemName = "Herz"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Herz10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Herz10/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Herz11" type="Sprite2D" parent="."]
+position = Vector2(631, 272)
+texture = ExtResource("3_o2l5v")
+script = ExtResource("2_qej18")
+ItemName = "Herz"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Herz11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Herz11/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Boots" type="Sprite2D" parent="."]
+position = Vector2(46, 112)
+texture = ExtResource("4_dbhwb")
+script = ExtResource("2_qej18")
+ItemName = "Boots"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Boots"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Boots/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Boots2" type="Sprite2D" parent="."]
+position = Vector2(103, 112)
+texture = ExtResource("4_dbhwb")
+script = ExtResource("2_qej18")
+ItemName = "Boots"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Boots2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Boots2/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Boots3" type="Sprite2D" parent="."]
+position = Vector2(159, 112)
+texture = ExtResource("4_dbhwb")
+script = ExtResource("2_qej18")
+ItemName = "Boots"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Boots3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Boots3/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Boots4" type="Sprite2D" parent="."]
+position = Vector2(228, 113)
+texture = ExtResource("4_dbhwb")
+script = ExtResource("2_qej18")
+ItemName = "Boots"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Boots4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Boots4/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Boots5" type="Sprite2D" parent="."]
+position = Vector2(299, 113)
+texture = ExtResource("4_dbhwb")
+script = ExtResource("2_qej18")
+ItemName = "Boots"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Boots5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Boots5/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Boots6" type="Sprite2D" parent="."]
+position = Vector2(368, 113)
+texture = ExtResource("4_dbhwb")
+script = ExtResource("2_qej18")
+ItemName = "Boots"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Boots6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Boots6/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Boots7" type="Sprite2D" parent="."]
+position = Vector2(437, 113)
+texture = ExtResource("4_dbhwb")
+script = ExtResource("2_qej18")
+ItemName = "Boots"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Boots7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Boots7/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Boots8" type="Sprite2D" parent="."]
+position = Vector2(502, 113)
+texture = ExtResource("4_dbhwb")
+script = ExtResource("2_qej18")
+ItemName = "Boots"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Boots8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Boots8/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Boots9" type="Sprite2D" parent="."]
+position = Vector2(559, 113)
+texture = ExtResource("4_dbhwb")
+script = ExtResource("2_qej18")
+ItemName = "Boots"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Boots9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Boots9/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Boots10" type="Sprite2D" parent="."]
+position = Vector2(621, 113)
+texture = ExtResource("4_dbhwb")
+script = ExtResource("2_qej18")
+ItemName = "Boots"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Boots10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Boots10/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Meteor" type="Sprite2D" parent="."]
+position = Vector2(46, 43)
+texture = ExtResource("5_x8186")
+script = ExtResource("2_qej18")
+ItemName = "Meteor"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Meteor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Meteor/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Meteor2" type="Sprite2D" parent="."]
+position = Vector2(105, 43)
+texture = ExtResource("5_x8186")
+script = ExtResource("2_qej18")
+ItemName = "Meteor"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Meteor2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Meteor2/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Meteor3" type="Sprite2D" parent="."]
+position = Vector2(165, 43)
+texture = ExtResource("5_x8186")
+script = ExtResource("2_qej18")
+ItemName = "Meteor"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Meteor3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Meteor3/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Meteor4" type="Sprite2D" parent="."]
+position = Vector2(230, 43)
+texture = ExtResource("5_x8186")
+script = ExtResource("2_qej18")
+ItemName = "Meteor"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Meteor4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Meteor4/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Meteor5" type="Sprite2D" parent="."]
+position = Vector2(299, 43)
+texture = ExtResource("5_x8186")
+script = ExtResource("2_qej18")
+ItemName = "Meteor"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Meteor5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Meteor5/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Meteor6" type="Sprite2D" parent="."]
+position = Vector2(370, 43)
+texture = ExtResource("5_x8186")
+script = ExtResource("2_qej18")
+ItemName = "Meteor"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Meteor6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Meteor6/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Meteor7" type="Sprite2D" parent="."]
+position = Vector2(439, 43)
+texture = ExtResource("5_x8186")
+script = ExtResource("2_qej18")
+ItemName = "Meteor"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Meteor7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Meteor7/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Meteor8" type="Sprite2D" parent="."]
+position = Vector2(506, 43)
+texture = ExtResource("5_x8186")
+script = ExtResource("2_qej18")
+ItemName = "Meteor"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Meteor8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Meteor8/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Meteor9" type="Sprite2D" parent="."]
+position = Vector2(565, 43)
+texture = ExtResource("5_x8186")
+script = ExtResource("2_qej18")
+ItemName = "Meteor"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Meteor9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Meteor9/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Meteor10" type="Sprite2D" parent="."]
+position = Vector2(625, 43)
+texture = ExtResource("5_x8186")
+script = ExtResource("2_qej18")
+ItemName = "Meteor"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Meteor10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Meteor10/Area2D"]
+shape = SubResource("RectangleShape2D_blj7f")
+
+[node name="Item_Meteor11" type="Sprite2D" parent="."]
+position = Vector2(625, 43)
+texture = ExtResource("5_x8186")
+script = ExtResource("2_qej18")
+ItemName = "Meteor"
+ItemAmount = 1
+
+[node name="Area2D" type="Area2D" parent="Item_Meteor11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Meteor11/Area2D"]
 shape = SubResource("RectangleShape2D_blj7f")
 
 [node name="ScrollContainer (Inventory)" type="ScrollContainer" parent="."]
 custom_minimum_size = Vector2(230, 500)
-offset_left = 902.0
+offset_left = 788.0
 offset_top = 13.0
 offset_right = 1132.0
-offset_bottom = 213.0
+offset_bottom = 513.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_g5fka")
 script = ExtResource("4_qqiym")
 
@@ -182,14 +545,45 @@ script = ExtResource("4_qqiym")
 layout_mode = 2
 columns = 4
 
-[connection signal="input_event" from="ItemBraun/Area2D" to="ItemBraun" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="ItemBraun2/Area2D" to="ItemBraun2" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="ItemBraun3/Area2D" to="ItemBraun3" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="ItemBraun4/Area2D" to="ItemBraun4" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="ItemBraun5/Area2D" to="ItemBraun5" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="ItemGrün/Area2D" to="ItemGrün" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="ItemGrün2/Area2D" to="ItemGrün2" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="ItemGrün3/Area2D" to="ItemGrün3" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="ItemGrün4/Area2D" to="ItemGrün4" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="ItemGrün5/Area2D" to="ItemGrün5" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="ItemGrün6/Area2D" to="ItemGrün6" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Orb/Area2D" to="Item_Orb" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Orb2/Area2D" to="Item_Orb2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Orb3/Area2D" to="Item_Orb3" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Orb4/Area2D" to="Item_Orb4" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Orb5/Area2D" to="Item_Orb5" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Orb6/Area2D" to="Item_Orb6" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Orb7/Area2D" to="Item_Orb7" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Orb8/Area2D" to="Item_Orb8" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Orb9/Area2D" to="Item_Orb9" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Orb10/Area2D" to="Item_Orb10" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Herz/Area2D" to="Item_Herz" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Herz2/Area2D" to="Item_Herz2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Herz3/Area2D" to="Item_Herz3" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Herz4/Area2D" to="Item_Herz4" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Herz5/Area2D" to="Item_Herz5" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Herz6/Area2D" to="Item_Herz6" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Herz7/Area2D" to="Item_Herz7" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Herz8/Area2D" to="Item_Herz8" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Herz9/Area2D" to="Item_Herz9" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Herz10/Area2D" to="Item_Herz10" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Herz11/Area2D" to="Item_Herz11" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Boots/Area2D" to="Item_Boots" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Boots2/Area2D" to="Item_Boots2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Boots3/Area2D" to="Item_Boots3" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Boots4/Area2D" to="Item_Boots4" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Boots5/Area2D" to="Item_Boots5" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Boots6/Area2D" to="Item_Boots6" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Boots7/Area2D" to="Item_Boots7" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Boots8/Area2D" to="Item_Boots8" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Boots9/Area2D" to="Item_Boots9" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Boots10/Area2D" to="Item_Boots10" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Meteor/Area2D" to="Item_Meteor" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Meteor2/Area2D" to="Item_Meteor2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Meteor3/Area2D" to="Item_Meteor3" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Meteor4/Area2D" to="Item_Meteor4" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Meteor5/Area2D" to="Item_Meteor5" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Meteor6/Area2D" to="Item_Meteor6" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Meteor7/Area2D" to="Item_Meteor7" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Meteor8/Area2D" to="Item_Meteor8" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Meteor9/Area2D" to="Item_Meteor9" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Meteor10/Area2D" to="Item_Meteor10" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Item_Meteor11/Area2D" to="Item_Meteor11" method="_on_area_2d_input_event"]
