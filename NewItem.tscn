@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://3amapyfm6s2"]
+
+[ext_resource type="Texture2D" uid="uid://dgkb413gd8qhc" path="res://Dirt4.png" id="1_rnktl"]
+[ext_resource type="Script" path="res://InventoryItem.gd" id="1_y3v0x"]
+
+[node name="VBoxContainer (Item)" type="VBoxContainer"]
+theme_override_constants/separation = -10
+script = ExtResource("1_y3v0x")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+icon = ExtResource("1_rnktl")
+flat = true
+icon_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Penis"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "(64)"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
